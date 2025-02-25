@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: greenfriends-app
-  namespace: greenfriends
+  name: marathon-app
+  namespace: marathon
 spec:
   replicas: 1
   strategy:
@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: preprod
       containers:
       - name: frontend
-        image: sathish8329/webengage:1545
+        image: sathish8329/marathon:1545
         ports:
         - containerPort: 8081  # Ensure the container is exposed on port 8001
 ---
@@ -30,8 +30,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: greenfriends-frontend-service
-  namespace: greenfriends
+  name: marathon-frontend-service
+  namespace: marathon
 spec:
   selector:
     app: frontend
