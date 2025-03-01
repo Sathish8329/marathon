@@ -24,7 +24,7 @@ spec:
         app: frontend
     spec:
       nodeSelector:
-        eks.amazonaws.com/nodegroup: kovaion-private-ng
+        eks.amazonaws.com/nodegroup: preprod
       containers:
       - name: frontend
         image: sathish8329/marathon:1678
