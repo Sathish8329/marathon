@@ -27,7 +27,7 @@ spec:
         eks.amazonaws.com/nodegroup: preprod
       containers:
       - name: frontend
-        image: sathish8329/marathon:1693
+        image: sathish8329/marathon:1694
         ports:
         - containerPort: 8081  # Ensure the container is exposed on port 8001
 ---
